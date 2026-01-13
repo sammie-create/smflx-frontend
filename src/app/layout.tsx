@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Merriweather, Roboto } from "next/font/google";
+import { Merriweather, Urbanist } from "next/font/google";
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 
@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   description: "Event Management platform",
 };
 
-export const roboto = Roboto({
+export const urbanist = Urbanist({
   subsets: ["latin"],
-  variable: "--font-roboto",
+  variable: "--font-urbanist",
 });
 
 export const merriweather = Merriweather({
@@ -22,7 +22,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${roboto.variable} ${merriweather.variable} h-full`}
+      className={`${urbanist.variable} ${merriweather.variable} h-full`}
     >
       <body className="h-full bg-color font-body">
         <Toaster position="top-right" theme="dark" richColors />

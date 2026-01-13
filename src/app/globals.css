@@ -48,8 +48,13 @@
   --sidebar-bg: var(--sidebar-bg);
   --color-brand-red: var(--brand-red);
   --color-brand-red-foreground: #fdedec;
+  --color-brand-blue-50: #e9f1fe;
+  --color-brand-blue-200: #83bffb;
+  --color-brand-blue-500: #1c70a8;
+  --color-brand-yellow-50: #fdeee2;
+  --color-brand-yellow-200: #f4ad41;
   --font-heading: var(--font-merriweather);
-  --font-body: var(--font-roboto);
+  --font-body: var(--font-urbanist);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -89,7 +94,6 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
   --shadow-card: 0 16px 40px -8px rgba(88, 92, 95, 0.16);
-
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -153,6 +157,6 @@ body {
   h4,
   h5,
   h6 {
-    @apply font-heading leading-0;
+    @apply font-heading leading-normal;
   }
 }

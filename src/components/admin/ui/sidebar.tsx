@@ -19,7 +19,7 @@ import Image from "next/image";
 import logo from "@/assets/images/lively-meetings.png";
 
 const navItems = [
-  { label: "Dashboard", href: "/dashboard", icon: LayoutGrid },
+  { label: "Dashboard", href: "/admin/dashboard", icon: LayoutGrid },
   { label: "Event Management", href: "/events", icon: CalendarDays },
   { label: "Registrations", href: "/registrations", icon: UserRoundPlus },
   { label: "Accommodations", href: "/accommodations", icon: Building2 },
@@ -38,12 +38,12 @@ function AdminSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden w-80 px-8 py-4 flex-col border-r border-neutral-100 bg-slate-200 lg:flex">
+    <aside className="hidden w-80 py-4 flex-col items-center border-r border-neutral-100 bg-slate-200 lg:flex xl:h-225">
       <div className="flex items-center justify-center w-full h-fit">
         <Image src={logo} alt="logo" height={60} className="object-contain" />
       </div>
 
-      <nav className="flex-1 space-y-4 py-4">
+      <nav className="flex-1 space-y-2 py-6 w-full ">
         {navItems.map(item => {
           const Icon = item.icon;
           const active = pathname.startsWith(item.href);
@@ -53,9 +53,9 @@ function AdminSidebar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 rounded-md px-8 py-4 font-normal text-base transition",
+                "flex items-center gap-3 px-8 py-4 font-normal text-base transition",
                 active
-                  ? "border-l border-brand-red text-brand-red"
+                  ? "border-l-[6px] border-brand-red text-brand-red"
                   : "text-slate-700 hover:text-brand-red"
               )}
             >
@@ -66,7 +66,7 @@ function AdminSidebar() {
         })}
       </nav>
 
-      <div className="border-t p-4">
+      <div className="border-t w-full p-4 self-start">
         <button className="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm text-red-600 hover:bg-red-50">
           <LogOut className="h-4 w-4" />
           Logout
