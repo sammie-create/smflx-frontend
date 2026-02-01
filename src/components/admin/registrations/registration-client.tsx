@@ -198,7 +198,7 @@ export default function RegistrationsClient({
         open={notifyOpen}
         onClose={() => setNotifyOpen(false)}
       />
-      <AddRegistrationModal open={addOpen} onClose={() => setAddOpen(false)} />
+      <AddRegistrationModal open={addOpen} onClose={() => setAddOpen(false)} events={[event]} />
     </div>
   );
 }
