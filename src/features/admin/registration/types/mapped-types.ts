@@ -1,5 +1,3 @@
-// src/types/registration.ts
-
 import {
   ParticipationMode,
   PaymentStatus,

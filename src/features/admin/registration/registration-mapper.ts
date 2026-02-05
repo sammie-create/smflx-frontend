@@ -1,5 +1,3 @@
-// src/lib/registration-mappers.ts
-
 import {
   ParticipationMode,
   PaymentStatus,

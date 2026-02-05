@@ -1,31 +1,33 @@
-import { Registration } from "@/features/admin/registration/types";
+// import { Registration } from "@/features/admin/registration/types/mapped-types";
 
-const names = [
-  "Micheal",
-  "Sarah",
-  "John",
-  "Esther",
-  "Tevez",
-  "Shola",
-  "Hassan",
-  "Toke",
-  "Demi",
-  "Helen",
-  "Emmanuel",
-  "Jacob",
-];
-const genders = ["Male", "Female"];
+// const names = [
+//   "Micheal",
+//   "Sarah",
+//   "John",
+//   "Esther",
+//   "Tevez",
+//   "Shola",
+//   "Hassan",
+//   "Toke",
+//   "Demi",
+//   "Helen",
+//   "Emmanuel",
+//   "Jacob",
+// ];
+// const genders = ["Male", "Female"];
 
-export const registrations: Registration[] = Array.from({ length: 50 }).map(
-  (_, i) => ({
-    id: String(i + 1),
-    eventId: "1",
-    name: `${names[i % names.length]} Thompson`,
-    email: "micheal.thompson@email.com",
-    type: i % 3 === 0 ? "Online" : i % 2 === 0 ? "Camper" : "Non-Camper",
-    gender: genders[i % genders.length] as "Male" | "Female",
-
-    payment: i % 2 === 0 ? "Completed" : "Pending",
-    accommodation: i % 2 === 0 ? "Moses - Room 1" : "Moses - Room 2",
-  }),
-);
+// export const registrations: Registration[] = Array.from({ length: 50 }).map(
+//   (_, i) => ({
+//     userId: String(i + 1),
+//     eventId: "1",
+//     user: {
+//       id: String(i + 1),
+//       fullName: `${names[i % names.length]} Thompson`,
+//       email: "micheal.thompson@email.com",
+//       gender: genders[i % genders.length] as "Male" | "Female",
+//     },
+//     participationMode: i % 3 === 0 ? "ONLINE" : i % 2 === 0 ? "CAMPER" : "NON_CAMPER",
+//     paymentStatus: i % 2 === 0 ? "COMPLETED" : "PENDING",
+//     accommodationType: i % 2 === 0 ? "HOSTEL" : "SHARED_APARTMENT",
+//   }),
+// );
